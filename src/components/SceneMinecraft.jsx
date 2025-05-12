@@ -30,7 +30,7 @@ const SceneMinecraft = () => {
               background={false}
             />
           </Suspense>
-          <OrbitControls />
+          <OrbitControls target={[0, 7, 0]}/>
         </Canvas>
       </div>
     </>
