@@ -227,7 +227,7 @@
 .page--construction {
   position: absolute;
   top: 0;
-  bottom: 0;
+  bottom: -500px;
 }
 
 .message {
@@ -269,4 +269,36 @@
   .message--sub {
     font-size: 16px;
   }
+}
+
+@media (min-width: 1200px) {
+  .message {
+    font-size: 128px; /* Reducir el tamaño del texto */
+    line-height: 150px;
+  }
+
+  .message--sub {
+    font-size: 20px; /* Ajustar el subtítulo */
+  }
+
+  .text_header {
+    font-size: 96px; /* Reducir el tamaño del encabezado */
+    line-height: 110px;
+  }
+
+  .text_subheader {
+    font-size: 20px; /* Ajustar el subtítulo */
+    letter-spacing: 8px;
+  }
+
+  .text_body {
+    font-size: 20px; /* Reducir el tamaño del cuerpo del texto */
+    line-height: 28px;
+  }
+
+  .page--construction {
+  position: absolute;
+  top: 0;
+  bottom: -250px;
+}
 }

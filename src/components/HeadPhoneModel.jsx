@@ -33,7 +33,7 @@ export function HeadPhone(props) {
   }, []);
 
   useLayoutEffect(() => {
-    timeline.current = gsap.timeline();
+    timeline.current = gsap.timeline({paused: true});
     let AnimationsData = [];
 
     const HeadbandAnimations = [
@@ -67,7 +67,7 @@ export function HeadPhone(props) {
         properties: {
           x: 0,
           y: 6.6097,
-          z: 8.3,
+          z: 3.3,
           duration: 0.8,
         },
         timelinePoint: 1,
@@ -118,7 +118,7 @@ export function HeadPhone(props) {
         properties: {
           x: 0,
           y: 0,
-          z: 8.3,
+          z: 4.3,
           duration: 0.8,
         },
         timelinePoint: 2,
@@ -179,7 +179,7 @@ export function HeadPhone(props) {
         properties: {
           x: 0,
           y: 0,
-          z: 8.5,
+          z: 4.5,
           duration: 0.8,
         },
         timelinePoint: 3,
@@ -246,7 +246,7 @@ export function HeadPhone(props) {
       {
         objectToAnimate: controls.current.target,
         properties: {
-          x: 4.4156,
+          x: 4,
           y: -1.996,
           z: 0,
           duration: 0.8,
@@ -278,7 +278,7 @@ export function HeadPhone(props) {
         objectToAnimate: generalGroupRef.current.rotation,
         properties: {
           x: 0.21692,
-          y: -0.52559,
+          y: -0.42559,
           z: 0.21692,
           duration: 0.8,
         },
@@ -410,7 +410,7 @@ export function HeadPhone(props) {
         properties: {
           x: 0,
           y: 0,
-          z: 8.3,
+          z: 5.3,
           duration: 0.8,
         },
         timelinePoint: 5.5,

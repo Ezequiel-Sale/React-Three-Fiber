@@ -11,8 +11,8 @@ const HeadPhones = () => {
       <div className="scene-container">
         <HeadPhoneLabels />
         <Suspense fallback={null}>
-          <SceneHeadPhones />
         </Suspense>
+          <SceneHeadPhones />
       </div>
     </>
   );
