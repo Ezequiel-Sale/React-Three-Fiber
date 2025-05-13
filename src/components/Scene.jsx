@@ -13,13 +13,13 @@ const Scene = () => {
           <Bottle position={[0, 0, 0]}/>
         </ScrollControls>
 
-        <directionalLight position={[10, 10, 10]} intensity={20} color={"white"} />
+        <directionalLight position={[10, 10, 10]} intensity={8} color={"white"} />
         <OrbitControls
           target={[0, 2, 0]}
           enableZoom={false}
           enableRotate={false}
         />
-        {/* <Environment files={"./snowy_park_01_1k.hdr"} background blur={0.5} /> */}
+        <Environment files={"./snowy_park_01_1k.hdr"} blur={0.5} />
       </Canvas>
     </div>
   );

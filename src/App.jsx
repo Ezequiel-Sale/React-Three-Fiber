@@ -10,6 +10,8 @@ import Labels from './components/Labels';
 import {  Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
 import HeadPhones from './components/headPhones';
+import ScenePhysics from './components/ScenePhysics';
+import Scene3DModel from './components/Scene3DModel';
 
 
 function App() {
@@ -26,13 +28,13 @@ function App() {
     <div id={"bg_container"} className={"container"}>
         <div className={"wrapper"}>
           <Labels />
-          <Suspense fallback={null}>
             <Scene />
-          </Suspense>
         </div>
       </div>
       }/>
       <Route path="/scroll-controls-headPhones" element={<HeadPhones />}/>
+      <Route path="/physics" element={<ScenePhysics />}/>
+      <Route path="/scene-3d-model" element={<Scene3DModel />}/>
     </Routes>
     </>
   );

@@ -1,5 +1,11 @@
 /* @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Slab&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&display=swap");
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .container {
   width: 100%;
   height: 100vh;
@@ -111,12 +117,12 @@
     display: flex;
     justify-content: start;
     align-items: center;
-    gap: 1rem;
-    padding: 1rem;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
     background-color: #000;
     color: #fff;
     width: 100%;
-    height: 25px;
+    height: 4rem;
     z-index: 50;
     position: fixed;
     top: 0;
@@ -125,8 +131,23 @@
   
   .navbar li {
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    background-color: rgb(29, 3, 173);
+    border-radius: 15px;
+    padding: 0.1rem 0.1rem;
 
+  }
+  
+  .navbar li:hover {
+    background-color: #333333;
+  }
+
+  .navbar li:nth-child(odd) {
+    background-color: #d70c0c;
+  }
+  
+  .navbar li:nth-child(odd):hover {
+    background-color: #333333;
   }
 
   .navbar li a {

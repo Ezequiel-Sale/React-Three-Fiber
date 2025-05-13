@@ -23,6 +23,12 @@ const NavBar = () => {
         <li>
           <Link to="/scroll-controls-headPhones">Scroll Controls Head Phones</Link>
         </li>
+        <li>
+          <Link to="/physics">Physics</Link>
+        </li>
+        <li>
+          <Link to="/scene-3d-model">Scene 3D Model</Link>
+        </li>
       </ul>
     </>
   );
