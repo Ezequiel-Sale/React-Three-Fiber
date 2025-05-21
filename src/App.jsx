@@ -7,7 +7,7 @@ import Scene from "./components/Scene";
 import Labels from './components/Labels';
 import {  Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
-import HeadPhones from './components/headPhones';
+import HeadPhones from './components/HeadPhones.jsx';
 import ScenePhysics from './components/ScenePhysics';
 import Scene3DModel from './components/Scene3DModel';
 import Scene3DModelCharacter from './components/Scene3DModelCharacter.jsx';
