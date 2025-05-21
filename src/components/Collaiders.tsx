@@ -22,6 +22,7 @@ export interface useSphereCollaiderProps {
 }
 interface BoxCollaider extends CollaiderPriops {
   args: [number, number, number];
+  ref: React.Ref<any>;
 }
 
 interface SphereCollaider extends CollaiderPriops {
@@ -45,6 +46,7 @@ export const Collaider = ({
   rotation,
   scale,
   args,
+  ref,
 }: BoxCollaider) => {
     const [boxCollaider, boxCollaiderAPI] = useBox<any>(() => ({
         type,
@@ -53,6 +55,7 @@ export const Collaider = ({
         position: [...position],
         rotation: [...rotation],
         scale: [...scale],
+        ref
     }))
   return <group ref={boxCollaider}>{children}</group>;
 };

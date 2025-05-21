@@ -7,11 +7,10 @@ import Base from './model/Base'
 import { CoffeCups } from './model/CoffeCups'
 import { Ball } from './model/Ball'
 import * as THREE from 'three'
-
 const Scene3DModel = () => {
   return (
     <div className='container'>
-        <Canvas camera={{ position: [-10, 10, 20] }}
+        <Canvas camera={{ position: [-20, 10, 25] }}
         gl={{ antialias: true, powerPreference: "high-performance", toneMapping: THREE.ACESFilmicToneMapping }}
         >
             <Physics
@@ -24,7 +23,7 @@ const Scene3DModel = () => {
             >
                 {/* <Debug color={"red"}> */}
                     <CoffeCups />
-                    <Base />
+                    <Base color='#000000'/>
                     <Ball />
                 {/* </Debug> */}
             </Physics>

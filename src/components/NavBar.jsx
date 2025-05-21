@@ -27,7 +27,10 @@ const NavBar = () => {
           <Link to="/physics">Physics</Link>
         </li>
         <li>
-          <Link to="/scene-3d-model">Scene 3D Model</Link>
+          <Link to="/scene-3d-model">Scene 3D Model with Pysics</Link>
+        </li>
+        <li>
+          <Link to="/3d-model-character">3D Model with Animations</Link>
         </li>
       </ul>
     </>

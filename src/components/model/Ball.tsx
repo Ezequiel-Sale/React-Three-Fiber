@@ -19,14 +19,14 @@ export function Ball(props: JSX.IntrinsicElements["group"]) {
     type: "Dynamic",
     mass: 50,
     args: [1],
-    position: [-2.646, 1, 0],
+    position: [-5.646, 1, 0],
     rotation: [0, 0, 0],
     scale: [0, 0, 0],
   });
 
   useLayoutEffect(() => {
     setTimeout(() => {
-      sphereCollaiderAPI.applyForce([40000, 10000, 0], [0, 0, 0]);
+      sphereCollaiderAPI.applyForce([150000, 10000, 0], [0, 0, 0]);
     }, 5000);
   }, []);
 

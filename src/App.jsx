@@ -1,17 +1,16 @@
 import './App.css'
-import { ScrollControls } from "@react-three/drei";
 import DebbuginTool from "./components/DebbuginTool";
 import HtmlThree from "./components/HtmlThree";
 import Materials from "./components/Materials";
 import SceneMinecraft from "./components/SceneMinecraft";
 import Scene from "./components/Scene";
-import { Suspense } from "react";
 import Labels from './components/Labels';
 import {  Route, Routes } from "react-router-dom";
 import NavBar from './components/NavBar';
 import HeadPhones from './components/headPhones';
 import ScenePhysics from './components/ScenePhysics';
 import Scene3DModel from './components/Scene3DModel';
+import Scene3DModelCharacter from './components/Scene3DModelCharacter.jsx';
 
 
 function App() {
@@ -35,6 +34,7 @@ function App() {
       <Route path="/scroll-controls-headPhones" element={<HeadPhones />}/>
       <Route path="/physics" element={<ScenePhysics />}/>
       <Route path="/scene-3d-model" element={<Scene3DModel />}/>
+      <Route path="/3d-model-character" element={<Scene3DModelCharacter />}/>
     </Routes>
     </>
   );
