@@ -8,6 +8,7 @@ import {
   IcosahedronCollaider,
   SphereCollaider,
 } from "./Collaiders";
+import React from "react";
 
 const ScenePhysics = () => {
   return (

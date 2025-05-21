@@ -1,4 +1,3 @@
-import React from 'react'
 import {PerspectiveCamera} from '@react-three/drei'
 
 const Camera = () => {

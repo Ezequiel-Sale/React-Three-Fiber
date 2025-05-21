@@ -22,7 +22,7 @@ export interface useSphereCollaiderProps {
 }
 interface BoxCollaider extends CollaiderPriops {
   args: [number, number, number];
-  ref: React.Ref<any>;
+  ref?: React.Ref<any>;
 }
 
 interface SphereCollaider extends CollaiderPriops {
