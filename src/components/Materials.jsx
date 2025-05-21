@@ -1,13 +1,12 @@
-import React from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Camera from "./Camera.jsx";
 import { Suspense } from "react";
-import Matcap from "./matcap.jsx";
 import Bricks from "./Bricks.jsx";
 import Light from "./Light";
 import { Environment } from "@react-three/drei";
 import * as THREE from "three";
+import Matcap from "./Matcap.jsx";
 
 const Materials = () => {
   return (
