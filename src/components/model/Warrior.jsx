@@ -1,49 +1,45 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
-import * as THREE from "three";
 import { BasicCharacterController } from "../utils/CharacterControlers";
 
 export function Warrior() {
   const { scene } = useThree();
-  const [controller, setController] = useState(null);
+  const controllerRef = useRef(null);
   const [model, setModel] = useState(null);
-  const ref = useRef(null);
 
   useEffect(() => {
-    // Instanciar el controlador y guardar la referencia
+    let isMounted = true;
     const charController = new BasicCharacterController({ scene });
-    setController(charController);
+    controllerRef.current = charController;
 
-    // Esperar a que el modelo se cargue y actualizar el estado
     const interval = setInterval(() => {
-      if (charController._target) {
+      if (charController._target && isMounted) {
         setModel(charController._target);
         clearInterval(interval);
       }
     }, 100);
 
-    return () => clearInterval(interval);
-  }, [scene, setController, setModel]);
+    return () => {
+      isMounted = false;
+      clearInterval(interval);
+    };
+  }, [scene]);
 
-  // Actualizar animaciones y lógica cada frame
   useFrame((_, delta) => {
-    if (controller) {
-      controller.Update(delta);
-    }
+    controllerRef.current?.Update(delta);
   });
 
   return (
-    <group ref={ref}>
+    <group>
       {model && (
         <primitive
           object={model}
           scale={0.046}
           position={[0, 0, 0]}
           rotation={[0, 0, 0]}
-          castShadow={true}
+          castShadow
         />
       )}
     </group>
   );
 }
-

@@ -1,4 +1,3 @@
-import React, { Suspense } from "react";
 import * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
@@ -18,10 +17,7 @@ const HtmlThree = () => {
             toneMappingExposure: 3.4,
           }}
         >
-          <Suspense fallback={null}>
             <Laptop />
-          </Suspense>
-
           <directionalLight
             position={[10, 10, 10]}
             intensity={1.3}

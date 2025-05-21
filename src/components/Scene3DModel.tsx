@@ -1,7 +1,7 @@
 import { Debug, Physics } from '@react-three/cannon'
 import { Environment, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import React from 'react'
+import React, { Suspense } from 'react'
 import Base from './model/Base'
 // import { CoffeCup } from './model/CoffeCup'
 import { CoffeCups } from './model/CoffeCups'
@@ -22,9 +22,11 @@ const Scene3DModel = () => {
             iterations={30}
             >
                 {/* <Debug color={"red"}> */}
+                <Suspense fallback={<div>Loading...</div>}>
                     <CoffeCups />
                     <Base color='#000000'/>
                     <Ball />
+                </Suspense>
                 {/* </Debug> */}
             </Physics>
 

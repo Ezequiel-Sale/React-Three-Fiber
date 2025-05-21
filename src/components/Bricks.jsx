@@ -20,7 +20,7 @@ const Bricks = () => {
   // baseColor.magFilter = THREE.NearestFilter
   return (
     <mesh position={[-4, 0, 0]} scale={2.5}>
-      <boxGeometry args={[1, 1, 1, 120, 120, 120]} />
+      <boxGeometry args={[1, 1, 1, 10, 10, 10]} />
       <meshStandardMaterial
         map={baseColor}
         normalMap={normalMap}

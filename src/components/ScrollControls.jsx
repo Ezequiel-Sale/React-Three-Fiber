@@ -1,4 +1,3 @@
-import React, { Suspense } from "react";
 import Scene from "./Scene";
 import "./ScrollControls.css";
 
@@ -7,9 +6,7 @@ const ScrollControls = () => {
     <>
       <div id={"bg_container"} className="container">
         <div className={"wrapper"}>
-          <Suspense fallback={null}>
             <Scene />
-          </Suspense>
         </div>
       </div>
     </>

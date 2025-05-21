@@ -9,7 +9,7 @@ const Scene3DModelCharacter = () => {
       <div className="container bg-dark">
         <Canvas
           shadows
-          camera={{ position: [-20, 10, 25], fov: 90 }}
+          camera={{ position: [-20, 10, 25], fov: 45 }}
           gl={{
             antialias: true,
             powerPreference: "high-performance",

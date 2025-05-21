@@ -1,7 +1,7 @@
 import { OrbitControls, useGLTF, useScroll } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import gsap from "gsap";
-import {  useLayoutEffect, useRef } from "react";
+import { useLayoutEffect, useRef } from "react";
 
 export function HeadPhone(props) {
   const { nodes, materials } = useGLTF("/models/Artics.glb");
@@ -33,7 +33,7 @@ export function HeadPhone(props) {
   }, []);
 
   useLayoutEffect(() => {
-    timeline.current = gsap.timeline({paused: true});
+    timeline.current = gsap.timeline({ paused: true });
     let AnimationsData = [];
 
     const HeadbandAnimations = [
@@ -435,6 +435,10 @@ export function HeadPhone(props) {
         animation.timelinePoint
       );
     });
+
+    return () => {
+      timeline.current && timeline.current.kill();
+    };
   });
 
   useFrame(() => {

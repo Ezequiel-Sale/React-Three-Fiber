@@ -117,6 +117,11 @@
   }
 
   .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
@@ -321,4 +326,17 @@
   top: 0;
   bottom: -250px;
 }
+}
+
+.minecraft {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  width: 50%;
+  height: 50%;
 }

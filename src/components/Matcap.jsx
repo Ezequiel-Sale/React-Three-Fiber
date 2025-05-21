@@ -6,7 +6,7 @@ const Matcap = () => {
     
   return (
     <mesh position={[0, 0, 0]}>
-    <torusKnotGeometry args={[1, 0.3, 100, 100]} />
+      <torusKnotGeometry args={[1, 0.3, 32, 16]} />
     <meshMatcapMaterial matcap={matcap}/>
   </mesh>
   )

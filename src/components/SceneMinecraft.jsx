@@ -1,40 +1,35 @@
-import React from 'react'
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
 import Camera from "./Camera";
-import { Suspense } from "react";
 import Light from "./Light";
 import { Environment } from "@react-three/drei";
 import { Minecraft } from "./Minecraft";
 import * as THREE from "three";
+import { Suspense } from "react";
 
 const SceneMinecraft = () => {
   return (
     <>
-     <div className="Container" style={{ height: "100vh", width: "100vw", backgroundColor: "black" }}>
+      <div className="bg-dark minecraft">
         <Canvas
+          frameloop="demand"
           gl={{
             antialias: true,
             toneMapping: THREE.ReinhardToneMapping,
             toneMappingExposure: 1.5,
           }}
-          shadows="true"
-          shadowMap
         >
           <Camera />
-         <Light />
-          <Suspense fallback={null}>
+          <Light />
+          <Suspense fallback={<div className="">Loading...</div>}>
             <Minecraft />
-            <Environment
-              files={"./recursos/hdr/decor_shop_1k.hdr"}
-              background={false}
-            />
           </Suspense>
-          <OrbitControls target={[0, 7, 0]}/>
+          <Environment files={"./recursos/hdr/decor_shop_1k.hdr"} />
+          <OrbitControls target={[0, 7, 0]} />
         </Canvas>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default SceneMinecraft
+export default SceneMinecraft;
